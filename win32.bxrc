@@ -1,0 +1,13 @@
+romimage: file=$BXSHARE/BIOS-bochs-latest
+vgaromimage: file=$BXSHARE/VGABIOS-lgpl-latest
+log: bochsout.txt
+
+megs: 16
+vga: update_freq=10
+keyboard: serial_delay=200, paste_delay=100000
+mouse: enabled=0
+
+display_library: win32
+
+floppya: 1_44=a.img, status=inserted
+boot: floppy
