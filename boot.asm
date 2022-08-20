@@ -10,6 +10,7 @@ DispStr:
 	mov	cx, msgLen		; CX = 串长度
 	mov	ax, 01301h		; AH = 13, AL = 01h
 	mov	bx, 000ch		; 页号为 0 (BH = 0) 黑底红字 (BL = 0Ch, 高亮)
+	mov	dh, 10h			; 通过 DH 指定行号
 	mov	dl, 0			; 将 DL 中的 ASCII 码显示到屏幕，将'\0'送到 DL 中，并显示
 	int	10h			; 10h 号中断
 	ret				; 返回到调用处
