@@ -15,7 +15,7 @@ DispStr:
 	int	10h			; 10h 号中断
 	ret				; 返回到调用处
 BootMessage:
-	db	"Hello From RobotCodec.Club!"
+        db      "Hello From BochsDemo! Origin from RobotCodec.Club!"
 msgLen:	equ	$ - BootMessage
 	times	510-($-$$)  db  0	; 填充剩下的空间，使生成的二进制代码恰好为512字节
 	dw	0xaa55			; 结束标志
